@@ -33,29 +33,34 @@ nav{
     grid-area: nav;
     font-family: Oxygen-bold;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
     nav a{
         text-decoration: none;
         color: #FFFBFE;
         transition: color 0.3s;
-        margin-left: 50px;
+        margin-right: 50px;
         font-size: 1.25rem;
     }
     nav a:hover{
         color: black;
     }
 
-    nav div{
-        background-image: url(../img/robotlogo.png);
+    nav .logo{
         height: 7.5vh;
-        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
         left: 0;
+        top: 0;
         position: absolute;background-size: contain;
+        font-size: 2rem;
     }
-
-header{
+        nav .logo img{
+            height: 80%;
+            aspect-ratio: 1/1;
+        }
+.headerIndex{
     background-color: coral;
     grid-area: hd;
     background-image: url(../img/what.jpg);
@@ -73,14 +78,16 @@ header{
         font-size: 3rem;
         flex-direction:column;
     }
-
+    
     .blur p{
         font-size: 1rem;
         margin: 0;
+        font-family: Oxygen-regular;
     }
-
+    
     .blur h1{
         margin: 0;
+        font-family: Oxygen-bold;
     }
 
 main{
@@ -88,7 +95,7 @@ main{
     grid-area: mn;
 }
 
-section{
+.indexSection{
     background-color: #79747E;
     grid-area: sec;
     display: flex;
@@ -110,15 +117,15 @@ section{
         background-position: 50%;
         height: 100%;
     }
-    section h1{
+    .indexSection h1{
         font-size: 3rem;
         margin: 0;
     }
-    section p{
+    .indexSection p{
         font-size: 1.5rem;
 
     }
-    section a{
+    .indexSection a{
         text-decoration: none;
         width: 32%;
         height: 100%;
@@ -129,6 +136,18 @@ section{
 footer{
     background-color: green;
     grid-area: ft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    height: 80%;
+    aspect-ratio: 1/1;
+}
+footer h3{
+    font-size: 3rem;
+    font-family: Oxygen-bold;
 }
 
 /* //////////////////////// ABOUT HTML ////////////////////////*/
@@ -138,10 +157,142 @@ footer{
     display: grid;
     grid-template-areas: 
     "nav"
+    "sec1"
+    "sec2"
+    "sec3"
+    "ft";
+    grid-template-rows: 7.5vh 80vh 80vh 80vh 15vh;
+}
+
+.sec1{
+    grid-area: sec1;
+    background-color: white;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sec2{
+    grid-area: sec2;
+    background-color: blue;
+    margin-bottom: 5vh;
+}
+.sec3{
+    grid-area: sec3;
+    background-color: magenta;
+    margin-bottom: 5vh;
+}
+
+.about{
+    width: 60%;
+    height: 100%;
+    background-color: red;
+}
+.aboutHeading{
+    width: 30%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: Oxygen-regular;
+}
+
+/* //////////////////////// MECHANISM HTML ////////////////////////*/
+
+.wrapperMechanisms{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "nav"
     "hd"
     "mn"
-    "sec"
     "ft";
-    grid-template-rows: 7.5vh 92.5vh 80vh 33% 15vh;
-    gap: 1vh;
+    grid-template-rows: 7.5vh 45vh 1fr 15vh;
+    gap: 5vh;
 }
+
+.hdMechanisms{
+    grid-area: hd;
+    background-color: red;
+}
+
+.mainMechanisms{
+    grid: mn;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6750A4;
+    flex-wrap: wrap;
+}   
+
+.sectionMechanisms{
+    height: 70vh;
+    width: 45vw;
+    border: solid black 10px;
+    background-color: #EADDFF;
+    font-family: Oxygen-regular;
+    padding: 15px;
+    box-sizing: border-box;
+}
+    .sectionMechanisms h2{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+.mainMechanisms img{
+    height: 70vh;
+    width: 45vw;
+    border: solid black 10px;
+    box-sizing: border-box;
+}
+
+
+/* //////////////////////// WHATS LEFT HTML ////////////////////////*/
+.wrapperWhatsLeft{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "hd"
+    "mn"
+    "ft";
+    grid-template-rows: 7.5vh 45vh 1fr 15vh;
+    gap: 5vh;
+}
+
+.hdWhatsLeft{
+    grid-area: hd;
+    background-color: red;
+}
+
+.mainWhatsLeft{
+    grid: mn;
+    background-color: grey;
+    display: flex;
+    justify-content: space-evenly;
+}   
+
+.whatsLeftSection{
+    height: 70vh;
+    width: 35vw;
+    background-color: mediumaquamarine;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3vh;
+    box-sizing: border-box;
+}
+    .whatsLeftSection h2{
+        font-size: 2rem;
+        font-family: Oxygen-regular;
+        margin: 0;
+    }
+    .whatsLeftSection p{
+        font-weight: 400;
+    }
