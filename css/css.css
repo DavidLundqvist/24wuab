@@ -10,289 +10,420 @@
 
 body{
     margin: 0;
-    background-color: #79747E;
+    background-color: #E6E1E5;
 }
+/* ////////////////////// FOR ALL DEVICES /////////////////////*/
+    /* //////////////////////// MENU ////////////////////////*/
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    
+    .fade-layer.visible{
+        display: block;
+    }
 
-/* //////////////////////// INDEX HTML ////////////////////////*/
-.wrapper{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "hd"
-    "mn"
-    "sec"
-    "ft";
-    grid-template-rows: 7.5vh 92.5vh 80vh 33% 15vh;
-    gap: 1vh;
-}
-
-nav{
-    background-color: #6750A4;
-    grid-area: nav;
-    font-family: Oxygen-bold;
+    .menu{
+    height: 100vh;
+    width: 50vw;
+    background: #79747E;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
     display: flex;
-    justify-content: right;
-    align-items: center;
-}
+    flex-direction: column;
+    }
+
+    .menu a{
+        margin-left: 5vw;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-family: Oxygen-bold;
+        color: black;
+        border-bottom: 5px solid black;
+        margin-bottom: 20px;
+    }
+
+    .show{
+        left: 0;
+    }
+
+    /* //////////////////////// INDEX HTML ////////////////////////*/
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "hd"
+        "mn"
+        "sec"
+        "ft";
+        gap: 2vh;
+    }
+    main{
+        background-color: #6750A4;
+        grid-area: mn;
+    }
+    .indexSection{
+        background-color: #E6E1E5;
+        grid-area: sec;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .selection{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            background-image: url(../img/sHOULDER.png);
+            background-size: cover;
+            background-position: 50%;
+        }
+        .indexSection h1{
+            font-size: 3rem;
+            margin: 0;
+        }
+        .indexSection p{
+            font-size: 1.25rem;
+        }
+        .indexSection a{
+            text-decoration: none;
+            color: black;
+            font-family: Oxygen-regular;
+        }
+
+        .headerIndex{
+            background-color: coral;
+            grid-area: hd;
+            background-image: url(../img/what.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .blur{
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 31%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                flex-direction:column;
+            }
+            
+            .blur p{
+                font-size: 1rem;
+                margin: 0;
+                font-family: Oxygen-regular;
+            }
+            
+            .blur h1{
+                margin: 0;
+                font-family: Oxygen-bold;
+            }
+            
+    footer{
+        background-color: #381E72;
+        grid-area: ft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #D0BCFF;
+    }
+    
+    footer img{
+        height: 80%;
+        aspect-ratio: 1/1;
+    }
+    
+    /* //////////////////////// ABOUT HTML ////////////////////////*/
+    .wrapperABOUT{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "sec1"
+        "sec2"
+        "sec3"
+        "ft";
+    }
+    .sec1{
+        grid-area: sec1;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .sec2{
+        grid-area: sec2;
+        background-color: blue;
+        margin-bottom: 5vh;
+    }
+    .sec3{
+        grid-area: sec3;
+        background-color: magenta;
+        margin-bottom: 5vh;
+    }
+
+    .about{
+        height: 100%;
+        background-color: red;
+    }
+    .aboutHeading{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-family: Oxygen-regular;
+        background-color: white;
+    }
+
+     /* //////////////////////// MECHANISMS HTML ////////////////////////*/
+    .wrapperMechanisms{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "hd"
+        "mn"
+        "ft";
+        grid-template-rows: 7.5vh 45vh 1fr 15vh;
+        gap: 5vh;
+    }
+
+    .hdMechanisms{
+        grid-area: hd;
+        background-color: red;
+    }
+
+    .mainMechanisms{
+        grid: mn;
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #6750A4;
+        flex-wrap: wrap;
+    }   
+
+    .sectionMechanisms{
+        height: 70vh;
+        width: 45vw;
+        border: solid black 10px;
+        background-color: #EADDFF;
+        font-family: Oxygen-regular;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+        .sectionMechanisms h2{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+    .mainMechanisms img{
+        height: 70vh;
+        width: 45vw;
+        border-left: solid black 10px;
+        border-top: solid black 10px;
+        border-bottom: solid black 10px;
+        box-sizing: border-box;
+    }
+
+/* //////////////////////// FOR DESKTOP ////////////////////////*/
+@media screen and (min-width:700px){
+/* //////////////////////// INDEX HTML ////////////////////////*/
+    .wrapper{
+        grid-template-rows: 7.5vh 92.5vh 80vh 33% 15vh;
+    }
+
+    nav{
+        background-color: #381E72;
+        width: 100%;
+        height: 7.5vh;
+        position: fixed;
+        font-family: Oxygen-bold;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        z-index: 2;
+    }
     nav a{
         text-decoration: none;
-        color: #FFFBFE;
+        color: #D0BCFF;
         transition: color 0.3s;
         margin-right: 50px;
         font-size: 1.25rem;
     }
     nav a:hover{
-        color: black;
+        color: white;
     }
 
     nav .logo{
         height: 7.5vh;
         display: flex;
         align-items: center;
-        left: 0;
+        left: 10vh;
         top: 0;
         position: absolute;background-size: contain;
         font-size: 2rem;
+        color: #D0BCFF;
     }
-        nav .logo img{
-            height: 80%;
-            aspect-ratio: 1/1;
-        }
-.headerIndex{
-    background-color: coral;
-    grid-area: hd;
-    background-image: url(../img/what.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    .blur{
-        backdrop-filter: blur(10px);
-        width: 100%;
-        height: 31%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    nav .logo img{
+        height: 80%;
+        aspect-ratio: 1/1;
+    }
+    .menuButton{
+        display: none;
+    }
+
+    .selection{
+        padding: 25px;
+        height: 100%;
+    }
+    .indexSection a{
+        width: 32%;
+        height: 100%;
+    }
+
+    footer h3{
         font-size: 3rem;
-        flex-direction:column;
-    }
-    
-    .blur p{
-        font-size: 1rem;
-        margin: 0;
-        font-family: Oxygen-regular;
-    }
-    
-    .blur h1{
-        margin: 0;
         font-family: Oxygen-bold;
     }
 
-main{
-    background-color: violet;
-    grid-area: mn;
-}
-
-.indexSection{
-    background-color: #79747E;
-    grid-area: sec;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-    .selection{
-        flex:1;
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        align-items: center;
-        text-align: center;
-        box-sizing: border-box;
-        padding: 25px;
-        /* Image */
-        background-image: url(../img/sHOULDER.png);
-        background-size: cover;
-        background-position: 50%;
-        height: 100%;
-    }
-    .indexSection h1{
-        font-size: 3rem;
-        margin: 0;
-    }
-    .indexSection p{
-        font-size: 1.5rem;
-
-    }
-    .indexSection a{
-        text-decoration: none;
-        width: 32%;
-        height: 100%;
-        color: black;
-        font-family: Oxygen-regular;
-    }
-
-footer{
-    background-color: green;
-    grid-area: ft;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer img{
-    height: 80%;
-    aspect-ratio: 1/1;
-}
-footer h3{
-    font-size: 3rem;
-    font-family: Oxygen-bold;
-}
-
 /* //////////////////////// ABOUT HTML ////////////////////////*/
-.wrapperABOUT{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "sec1"
-    "sec2"
-    "sec3"
-    "ft";
-    grid-template-rows: 7.5vh 80vh 80vh 80vh 15vh;
-}
-
-.sec1{
-    grid-area: sec1;
-    background-color: white;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.sec2{
-    grid-area: sec2;
-    background-color: blue;
-    margin-bottom: 5vh;
-}
-.sec3{
-    grid-area: sec3;
-    background-color: magenta;
-    margin-bottom: 5vh;
-}
-
-.about{
-    width: 60%;
-    height: 100%;
-    background-color: red;
-}
-.aboutHeading{
-    width: 30%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    font-family: Oxygen-regular;
-}
+    .sec1{
+        justify-content: space-evenly;
+    }
+    .about{
+        width: 60%;
+    }
+    .aboutHeading{
+        width: 30%;
+    }
+    .wrapperABOUT{
+        grid-template-rows: 7.5vh 80vh 80vh 80vh 15vh;
+    }
 
 /* //////////////////////// MECHANISM HTML ////////////////////////*/
 
-.wrapperMechanisms{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "hd"
-    "mn"
-    "ft";
-    grid-template-rows: 7.5vh 45vh 1fr 15vh;
-    gap: 5vh;
-}
-
-.hdMechanisms{
-    grid-area: hd;
-    background-color: red;
-}
-
-.mainMechanisms{
-    grid: mn;
-    background-color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #6750A4;
-    flex-wrap: wrap;
-}   
-
-.sectionMechanisms{
-    height: 70vh;
-    width: 45vw;
-    border: solid black 10px;
-    background-color: #EADDFF;
-    font-family: Oxygen-regular;
-    padding: 15px;
-    box-sizing: border-box;
-}
-    .sectionMechanisms h2{
-        font-size: 2rem;
-        font-weight: 700;
-    }
-
-.mainMechanisms img{
-    height: 70vh;
-    width: 45vw;
-    border: solid black 10px;
-    box-sizing: border-box;
-}
 
 
 /* //////////////////////// WHATS LEFT HTML ////////////////////////*/
-.wrapperWhatsLeft{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "hd"
-    "mn"
-    "ft";
-    grid-template-rows: 7.5vh 45vh 1fr 15vh;
-    gap: 5vh;
-}
-
-.hdWhatsLeft{
-    grid-area: hd;
-    background-color: red;
-}
-
-.mainWhatsLeft{
-    grid: mn;
-    background-color: grey;
-    display: flex;
-    justify-content: space-evenly;
-}   
-
-.whatsLeftSection{
-    height: 70vh;
-    width: 35vw;
-    background-color: mediumaquamarine;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 3vh;
-    box-sizing: border-box;
-}
-    .whatsLeftSection h2{
-        font-size: 2rem;
-        font-family: Oxygen-regular;
-        margin: 0;
+    .wrapperWhatsLeft{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "hd"
+        "mn"
+        "ft";
+        grid-template-rows: 7.5vh 45vh 1fr 15vh;
+        gap: 5vh;
     }
-    .whatsLeftSection p{
-        font-weight: 400;
+
+    .hdWhatsLeft{
+        grid-area: hd;
+        background-color: red;
     }
+
+    .mainWhatsLeft{
+        grid: mn;
+        background-color: grey;
+        display: flex;
+        justify-content: space-evenly;
+    }   
+
+    .whatsLeftSection{
+        height: 70vh;
+        width: 35vw;
+        background-color: mediumaquamarine;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 3vh;
+        box-sizing: border-box;
+    }
+        .whatsLeftSection h2{
+            font-size: 2rem;
+            font-family: Oxygen-regular;
+            margin: 0;
+        }
+        .whatsLeftSection p{
+            font-weight: 400;
+        }
+}
+
+/* //////////////////////// FOR MOBIL ////////////////////////*/
+@media screen and (max-width:700px){
+    /* //////////////////////// INDEX HTML ////////////////////////*/
+    .wrapper{
+        grid-template-rows: 7.5vh 92.5vh 80vh 33% 15vh;
+    }
+    
+    .menuButton{
+        display: inline;
+        height: 10vh;
+        aspect-ratio: 1/1;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .menuButton img{
+        width: 100%;
+        z-index: 0;
+    }
+    nav a{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+
+    .indexSection{
+        flex-direction: column;
+    }
+    .selection{
+        height: 100%;
+    }
+    .indexSection a{
+        width: 100%;
+        height: 32%;
+    }
+
+    footer h3{
+        display: none;
+    }
+
+    /* //////////////////////// ABOUT HTML ////////////////////////*/
+    .about{
+        width: 65%;
+    }
+    .aboutHeading{
+        width: 35%;
+    }
+    .wrapperABOUT{
+        grid-template-rows: 7.5vh 100vh 80vh 80vh 15vh;
+    }
+
+    /* //////////////////////// MECHANISM HTML ////////////////////////*/
+}
