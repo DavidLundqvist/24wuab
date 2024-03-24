@@ -10,8 +10,8 @@
 
 body{
     margin: 0;
-    background-color: #E6E1E5;
 }
+
 /* ////////////////////// FOR ALL DEVICES /////////////////////*/
     /* //////////////////////// MENU ////////////////////////*/
     .fade-layer{
@@ -32,7 +32,7 @@ body{
     .menu{
     height: 100vh;
     width: 50vw;
-    background: #79747E;
+    background: #6750A4;
     position: fixed;
     top: 0;
     left: -90vw;
@@ -48,8 +48,8 @@ body{
         text-decoration: none;
         font-size: 1.25rem;
         font-family: Oxygen-bold;
-        color: black;
-        border-bottom: 5px solid black;
+        color: #D0BCFF;  
+        border-bottom: 5px solid #D0BCFF;
         margin-bottom: 20px;
     }
 
@@ -68,14 +68,28 @@ body{
         "mn"
         "sec"
         "ft";
-        gap: 2vh;
     }
-    main{
+    nav{
+        background-color: #381E72;
+        width: 100%; 
+    }
+    .mainIndex{
         background-color: #6750A4;
         grid-area: mn;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+     .mainIndexAbout{
+        background-color: #EADDFF;
+        font-family: Oxygen-regular;
+        padding: 25px;
+        box-sizing: border-box;
+        width: 80vw;
+        font-size: 1.5rem;
+    }
+
     .indexSection{
-        background-color: #E6E1E5;
         grid-area: sec;
         display: flex;
         justify-content: space-evenly;
@@ -89,34 +103,51 @@ body{
             align-items: center;
             text-align: center;
             box-sizing: border-box;
-            background-image: url(../img/sHOULDER.png);
-            background-size: cover;
-            background-position: 50%;
         }
-        .indexSection h1{
-            font-size: 3rem;
-            margin: 0;
-        }
-        .indexSection p{
-            font-size: 1.25rem;
-        }
+
         .indexSection a{
             text-decoration: none;
             color: black;
             font-family: Oxygen-regular;
+            height: 100%;
+            width: 32%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-left: 5px solid #D0BCFF;
+            border-right: 5px solid #D0BCFF;
+            justify-content: space-between;
+            object-fit: contain;
+        }
+        .indexSubtitle{
+            text-align: center;
+            background-color: #D0BCFF;
+        }
+        .indexSubtitle h2{
+            font-size: 3rem;
+            font-family: Oxygen-bold;
+        }
+        .indexSubtitle p{
+            font-size: 1.75rem;
+            font-family: Oxygen-regular;
+            margin-top: 0;
+        }
+        .indexSection a img{
+            width: 90%;
+            margin-bottom: 10px;
         }
 
         .headerIndex{
-            background-color: coral;
             grid-area: hd;
-            background-image: url(../img/what.jpg);
+            background-color: #D0BCFF;
+            background-size: 90%;
+            background-repeat: no-repeat;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
         }
             .blur{
-                -webkit-backdrop-filter: blur(10px);
-                backdrop-filter: blur(10px);
                 width: 100%;
                 height: 31%;
                 display: flex;
@@ -158,42 +189,44 @@ body{
         display: grid;
         grid-template-areas: 
         "nav"
-        "sec1"
-        "sec2"
-        "sec3"
+        "mn"
         "ft";
     }
-    .sec1{
-        grid-area: sec1;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
+
+    .aboutMain{
+        grid-area: mn;
+        background-color: #6750A4;
+    }
+
+    .aboutMain section{
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-    .sec2{
-        grid-area: sec2;
-        background-color: blue;
-        margin-bottom: 5vh;
-    }
-    .sec3{
-        grid-area: sec3;
-        background-color: magenta;
-        margin-bottom: 5vh;
+        background-color: #D0BCFF;
+        height: 80vh;
+        margin-bottom: 10vh;
     }
 
     .about{
         height: 100%;
-        background-color: red;
+        background-color: #EADDFF;
+        padding: 25px;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        font-family: Oxygen-regular;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .aboutHeading{
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         font-size: 3rem;
         font-family: Oxygen-regular;
-        background-color: white;
+        color: #381E72;
     }
 
      /* //////////////////////// MECHANISMS HTML ////////////////////////*/
@@ -206,8 +239,7 @@ body{
         "hd"
         "mn"
         "ft";
-        grid-template-rows: 7.5vh 45vh 1fr 15vh;
-        gap: 5vh;
+        grid-template-rows: 7.5vh 40vh 1fr 15vh;
     }
 
     .hdMechanisms{
@@ -216,48 +248,110 @@ body{
     }
 
     .mainMechanisms{
-        grid: mn;
+        grid-area: mn;
         background-color: grey;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #6750A4;
-        flex-wrap: wrap;
+        padding-top: 5vh;
     }   
 
-    .sectionMechanisms{
-        height: 70vh;
-        width: 45vw;
-        border: solid black 10px;
+    .divMechanisms{
         background-color: #EADDFF;
-        font-family: Oxygen-regular;
-        padding: 15px;
+        padding: 25px;
         box-sizing: border-box;
     }
-        .sectionMechanisms h2{
-            font-size: 2rem;
+        .divMechanisms h2{
             font-weight: 700;
+            margin: 0;
+            font-family: Oxygen-bold;
+        }
+        .divMechanisms p{
+            font-family: Oxygen-regular;
         }
 
     .mainMechanisms img{
-        height: 70vh;
-        width: 45vw;
-        border-left: solid black 10px;
-        border-top: solid black 10px;
-        border-bottom: solid black 10px;
         box-sizing: border-box;
     }
 
+    .card{
+        margin-bottom: 5vh;
+    }
+    .card img{
+        object-fit: contain;
+        background-color: #D0BCFF;
+    }
+
+    /* //////////////////////// WHATS LEFT HTML ////////////////////////*/
+    .wrapperWhatsLeft{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "hd"
+        "mn"
+        "ft";
+        grid-template-rows: 7.5vh 40vh 1fr 15vh;
+    }
+
+    .hdWhatsLeft{
+        grid-area: hd;
+        background-color: #6750A4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+        .hdWhatsLeft h1{
+            font-family: Oxygen-bold;
+            color: #D0BCFF;
+            margin: 0;
+        }
+        .hdWhatsLeft p{
+            font-family: Oxygen-bold;
+            font-size: 1rem;
+            color: #D0BCFF;
+            text-align: center;
+        }
+
+    .mainWhatsLeft{
+        grid-area: mn;
+        background-color: #6750A4;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5vh;
+    }   
+
+    .whatsLeftSection{
+        background-color: #D0BCFF;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 3vh;
+        box-sizing: border-box;
+        color: black;
+        margin-bottom: 5vh;
+    }
+        .whatsLeftSection h2{
+            font-family: Oxygen-regular;
+            margin: 0;
+        }
+        .whatsLeftSection p{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
 /* //////////////////////// FOR DESKTOP ////////////////////////*/
-@media screen and (min-width:700px){
-/* //////////////////////// INDEX HTML ////////////////////////*/
+@media screen and (min-width:730px){
+    /* //////////////////////// INDEX HTML ////////////////////////*/
     .wrapper{
         grid-template-rows: 7.5vh 92.5vh 80vh 33% 15vh;
     }
 
     nav{
-        background-color: #381E72;
-        width: 100%;
         height: 7.5vh;
         position: fixed;
         font-family: Oxygen-bold;
@@ -294,14 +388,8 @@ body{
     .menuButton{
         display: none;
     }
-
-    .selection{
-        padding: 25px;
-        height: 100%;
-    }
-    .indexSection a{
-        width: 32%;
-        height: 100%;
+    .headerIndex{
+        background-image: url(../img/fullArm.png);
     }
 
     footer h3{
@@ -309,8 +397,8 @@ body{
         font-family: Oxygen-bold;
     }
 
-/* //////////////////////// ABOUT HTML ////////////////////////*/
-    .sec1{
+    /* //////////////////////// ABOUT HTML ////////////////////////*/
+    .aboutMain section{
         justify-content: space-evenly;
     }
     .about{
@@ -320,64 +408,57 @@ body{
         width: 30%;
     }
     .wrapperABOUT{
-        grid-template-rows: 7.5vh 80vh 80vh 80vh 15vh;
+        grid-template-rows: 7.5vh 1fr 15vh;
     }
 
-/* //////////////////////// MECHANISM HTML ////////////////////////*/
+    /* //////////////////////// MECHANISM HTML ////////////////////////*/
+    .mainMechanisms{
+        flex-wrap: wrap;
+    } 
 
+    .divMechanisms{
+        height: 70vh;
+        width: 45vw;
+    }
+        .divMechanisms h2{
+            font-size: 2rem;
+        }
 
-
-/* //////////////////////// WHATS LEFT HTML ////////////////////////*/
-    .wrapperWhatsLeft{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-areas: 
-        "nav"
-        "hd"
-        "mn"
-        "ft";
-        grid-template-rows: 7.5vh 45vh 1fr 15vh;
-        gap: 5vh;
+    .mainMechanisms img{
+        height: 70vh;
+        width: 45vw;
+        padding: 20px;
     }
 
-    .hdWhatsLeft{
-        grid-area: hd;
-        background-color: red;
+    .card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* //////////////////////// WHATS LEFT HTML ////////////////////////*/
+    .whatsLeftSection{
+        height: 50vh;
+        width: 35vw;
     }
 
     .mainWhatsLeft{
-        grid: mn;
-        background-color: grey;
-        display: flex;
         justify-content: space-evenly;
-    }   
-
-    .whatsLeftSection{
-        height: 70vh;
-        width: 35vw;
-        background-color: mediumaquamarine;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 3vh;
-        box-sizing: border-box;
     }
-        .whatsLeftSection h2{
-            font-size: 2rem;
-            font-family: Oxygen-regular;
-            margin: 0;
-        }
-        .whatsLeftSection p{
-            font-weight: 400;
-        }
+
+    .hdWhatsLeft h1{
+        font-size: 5rem;
+    }
+
+    .whatsLeftSection h2{
+        font-size: 2.5rem;
+    }
 }
 
 /* //////////////////////// FOR MOBIL ////////////////////////*/
-@media screen and (max-width:700px){
+@media screen and (max-width:730px){
     /* //////////////////////// INDEX HTML ////////////////////////*/
     .wrapper{
-        grid-template-rows: 7.5vh 92.5vh 80vh 33% 15vh;
+        grid-template-rows: 12.5vh 92.5vh 1fr 1fr 15vh;
     }
     
     .menuButton{
@@ -390,17 +471,39 @@ body{
 
     .menuButton img{
         width: 100%;
-        z-index: 0;
+        margin-left: 1.25vh;
     }
+
+    .mainIndex{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        height: 12.5vh;
+        position: fixed;
+        z-index: 1;
+    }
+
     nav a{
         display: none;
     }
     .logo{
         display: none;
     }
+    
+    .blur h1{
+        margin-bottom: 40vh;
+    }
+    .headerIndex{
+        background-image: url(../img/fullArmMobile.jpg);
+    }
 
     .indexSection{
         flex-direction: column;
+        background-color: #6750A4;
     }
     .selection{
         height: 100%;
@@ -409,6 +512,20 @@ body{
         width: 100%;
         height: 32%;
     }
+    .indexSection a img{
+        display: none;
+    }
+
+    .indexSubtitle h2{
+        font-size: 2rem;
+    }
+    .indexSubtitle p{
+        font-size: 1rem;
+    }
+
+    .indexSubtitle{
+        margin-bottom: 2vh;
+    }
 
     footer h3{
         display: none;
@@ -416,14 +533,60 @@ body{
 
     /* //////////////////////// ABOUT HTML ////////////////////////*/
     .about{
-        width: 65%;
+        width: 100%;
+        font-size: 1.25rem;
     }
+
     .aboutHeading{
-        width: 35%;
+        height: 10vh;
+        font-size: 2rem;
     }
+
     .wrapperABOUT{
-        grid-template-rows: 7.5vh 100vh 80vh 80vh 15vh;
+        grid-template-rows: 7.5vh 1fr 15vh;
+    }
+
+    .aboutMain section{
+        flex-direction: column;
+        height: auto;
     }
 
     /* //////////////////////// MECHANISM HTML ////////////////////////*/
+    .mainMechanisms{
+        flex-direction: column;
+    } 
+    
+    .divMechanisms{
+        width: 90vw;
+    }
+        .divMechanisms h2{
+            font-size: 2rem;
+        }
+
+    .mainMechanisms img{
+        width: 90vw;
+        /* aspect-ratio: 1/1; */
+    }
+
+    /* //////////////////////// WHATS LEFT HTML ////////////////////////*/
+    .mainWhatsLeft{
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .whatsLeftSection{
+        width: 90vw;
+    }
+
+    .hdWhatsLeft h1{
+        font-size: 3rem;
+    }
+
+    .whatsLeftSection h2{
+        font-size: 2rem;
+    }
+
+    .card img{
+        height: 40vh;
+    }
 }

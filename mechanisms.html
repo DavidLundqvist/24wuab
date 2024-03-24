@@ -12,7 +12,7 @@
     <div class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="">Mehcanisms</a>
+        <a href="">Mechanisms</a>
         <a href="whatsleft.html">Whats left</a>
     </div>
 
@@ -30,100 +30,108 @@
               </div>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="">Mehcanisms</a>
+            <a href="">Mechanisms</a>
             <a href="whatsleft.html">Whats left</a>
           </nav>
 
-        <header class="hdMechanisms"></header>
+          <header class="hdWhatsLeft">
+            <h1>
+                Whats left
+            </h1>
+            <p>
+                There are 4 different modules which compose the arm; the hand, bicep, shoulder and electronics. <br> Here is information about all four parts.
+            </p>
+        </header>
 
         <main class="mainMechanisms">
-
-            <img src="img/what.jpg" alt="">
-            <section class="sectionMechanisms">
-                <div>
-                    <h2>Shoudler</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea deserunt quae sed nam ipsum architecto 
-                        omnis a voluptate quas culpa veniam placeat, provident quasi voluptates. Totam nemo eveniet tenetur, 
-                        nam, non perspiciatis ducimus laudantium sed voluptates cumque ullam dolorem magnam. <br><br> Lorem ipsum 
-                        dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                         quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                         natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                         ulpa dolore aliquid aliquam. Facere, earum!<br><br> Lorem ipsum 
-                         dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                          quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                          natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                          ulpa dolore aliquid aliquam. Facere, earum!
-                    </p>
+            <section class="card">
+                <img src="img/hand.png" alt="Image of robot hand/forearm">
+                <div class="divMechanisms">
+                    <div>
+                        <h2>Hand</h2>
+                        <p>
+                            The hand is the first part of the arm. Inside the forearm, there are 6 motors. 5 to control each individual
+                            finger, and one to rotate the wrist. The finger motors work by tugging a string which is attatched to the 
+                            inside of the finger top. You can see this with the thumb where the finger top is currently removed. By
+                            pulling the string, the finger will curl up and when released it will unflex. The motor pulls and releases
+                            the string in order to flex the finger. One motor is for one finger so each finger can be controlled individually.
+                            <br><br> The wrist motor is a simple gear which moves a bigger gear, which the whole hand is attatched to resulting
+                            in the wrist being able to turn. The motors in the fingers are MG996r servos, while the wrist is a micro servo.
+                            The mechanism can be seen peeking out in the hoels in the forearm. The holes are due to design and CADing errors.
+                            <br><br> At the base of the forearm, all wires from the motors are exserted. The wires are then put in the back of he 
+                            bicep and go up to the electronic circuit board. The forearm has 2 places to attatch to the bicep. One is the point of
+                            rotation, while the other is to actually pull the forearm up. This is more thorrowly explained in the next section.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <img src="img/what.jpg" alt="">
-            <section class="sectionMechanisms">
-                <div>
-                    <h2>Hand</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea deserunt quae sed nam ipsum architecto 
-                        omnis a voluptate quas culpa veniam placeat, provident quasi voluptates. Totam nemo eveniet tenetur, 
-                        nam, non perspiciatis ducimus laudantium sed voluptates cumque ullam dolorem magnam. <br><br> Lorem ipsum 
-                        dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                         quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                         natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                         ulpa dolore aliquid aliquam. Facere, earum!<br><br> Lorem ipsum 
-                         dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                          quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                          natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                          ulpa dolore aliquid aliquam. Facere, earum!
-                    </p>
+            <section class="card">
+                <img src="img/bicep.png" alt="Image of robot bicep">
+                <div class="divMechanisms">
+                    <div>
+                        <h2>Bicep</h2>
+                        <p>
+                            The bicep is the second piece to the arm. Its funtion is to pull the forearm up and down to recemble a bicep and to twist
+                            the whole arm to face any direction. The bicep has 2 motors to complete this. One MG996r servo motor which can be seen inside 
+                            the bicep, and the other servo is a micro servo which is at the top of the bicep (on the left of the picture). <br><br> The 
+                            bicep works by having the motor attached to a worm gear which when activated pulls the motor up towards it by screwing in the 
+                            worm gear. The bottom of the motor is attached to a hole on the forearm. This motion pulls the forarm upwards. <br><br> Like 
+                            the wrist movement, the turning of the whole arm works with the same principle. The bicep is attached to a gear with a worm gear
+                            as driver gear. When it turns, the bicep and then whole arm turns with it. Over this mechanism is where the shoulder sits. Its 
+                            attached to the bicep simply with pegs you could say.
+                        </p>
+                    </div>
                 </div>
             </section>
             
-            <img src="img/what.jpg" alt="">
-            <section class="sectionMechanisms">
-                <div>
-                    <h2>Bicep</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea deserunt quae sed nam ipsum architecto 
-                        omnis a voluptate quas culpa veniam placeat, provident quasi voluptates. Totam nemo eveniet tenetur, 
-                        nam, non perspiciatis ducimus laudantium sed voluptates cumque ullam dolorem magnam. <br><br> Lorem ipsum 
-                        dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                         quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                         natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                         ulpa dolore aliquid aliquam. Facere, earum!<br><br> Lorem ipsum 
-                         dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                          quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                          natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                          ulpa dolore aliquid aliquam. Facere, earum!
-                    </p>
+            <section class="card">
+                <img src="img/ShoulderView.png" alt="Image of robot shoulder">
+                <div class="divMechanisms">
+                    <div>
+                        <h2>Shoulder</h2>
+                        <p>
+                            The shoulder is the third piece of the arm and the last of the actual arm. It is the most complex and constraining part of the arm.
+                            The shoulder is like a hinge, alloing the whole arm to move outwards from where the body would have been. The hinge is then attached
+                            to a surface which can turn allowing it to go forward. In the hinge and the surface plate are 2 NEVA 17 stepper motors. <br><br>
+                            The motors are in cylinders with 2 planitary gears in series with a 3:1 ratio meaning to spin the last piece one rotation, the motor 
+                            would have to spin 9 times! This helps give more torque to the motor and allow it to lift the weight of the arm. The end of the last planitary
+                            gear is attached to the hinge making it move, and the surface plate making it also move. <br><br> The cylinders are stationary while 
+                            everything else aroudn them rotates. They are the pivot of rotation for each axis. The surface plate is secured to a table or surface. 
+                            This completes all the parts of the arm, but all the motors have to be controlled form somewhere and get energy somewhere too. This is where
+                            the electronics come in.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <img src="img/what.jpg" alt="">
-            <section class="sectionMechanisms">
-                <div>
-                    <h2>Electronics</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea deserunt quae sed nam ipsum architecto 
-                        omnis a voluptate quas culpa veniam placeat, provident quasi voluptates. Totam nemo eveniet tenetur, 
-                        nam, non perspiciatis ducimus laudantium sed voluptates cumque ullam dolorem magnam. <br><br> Lorem ipsum 
-                        dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                         quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                         natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                         ulpa dolore aliquid aliquam. Facere, earum!<br><br> Lorem ipsum 
-                         dolor sit amet consectetur adipisicing elit. Nemo tenetur neque nihil sunt sapiente veniam, voluptates,
-                          quae accusantium eius molestias facere doloremque? In ratione architecto quasi! A, in officia iure 
-                          natus at sequi voluptatibus eos, eaque aspernatur quae porro quibusdam nemo libero ab praesentium c
-                          ulpa dolore aliquid aliquam. Facere, earum!
-                    </p>
+            <section class="card">
+                <img src="img/electronics.png" alt="Image of electronics">
+                <div class="divMechanisms">
+                    <div>
+                        <h2>Electronics</h2>
+                        <p>
+                            This is the brain of the arm, this is where all inputs are handled and the controlling of each and every motor. The method of
+                            controlling the arm which i have chosen is by using an arduino uno wifi r3. It is like a rasbery pie, but more powerful and can
+                            easier to work with. This, along with the breadbord to the right of it, help connect all motors to one place. <br><br> Each motor has 
+                            a power cord, a ground cord, and a signal cord. All power cords are connected to one side of the breadboard, while all the ground cords
+                            are to the other side. The signal cord is attached to the arduino. In this case, the arduino only provides the signal and input for the 
+                            motors, but not the actual power. <br><br> The power for the motors is gotten using a micro HDMI charger plugged into the wall. The micro 
+                            HDMI is split into its positive and ground cables which are attached to each respective side of the breadboard. This gives the motors power. 
+                            The arduino gets power from the computer which is the GUI for the controls.
+                        </p>
+                    </div>
                 </div>
             </section>
-
         </main>
 
-        <footer></footer>
+        <footer>
+            <img src="img/robotlogo.png" alt="Logo">
+            <h3>ACRA</h3>
+        </footer>
 
     </div>
 
+    <script src="js/js.js"></script>
 </body>
-<script src="js/js.js"></script>
 </html>
